@@ -1,0 +1,14 @@
+<%
+    var postPage;
+    site.tags.forEach(function(item) {
+        if(item.name === page.tag) {
+            postPage = item;
+        }postPage
+    });
+%>
+
+<section class="main clearfix">
+    <% postPage.posts.each(function(item){ %>
+        <%- partial('_partial/article-index', {item: item}) %>
+    <% }); %>
+</section>
